@@ -1,0 +1,9 @@
+# Raw datasets
+data/archive/**/*.csv
+data/archive/**/*.zip
+
+# Excel temporary files
+**/~$*
+**/~$*.xlsx
+**/~$*.xlsm
+**/~$*.xls
