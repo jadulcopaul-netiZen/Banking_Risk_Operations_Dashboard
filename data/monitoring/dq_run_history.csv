@@ -1,0 +1,67 @@
+run_id,run_timestamp, ,CheckType,Column,Rule,RowsTested,FailedCount,FailedPercentage,Status
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,step,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,type,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,amount,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,nameOrig,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,oldbalanceOrg,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,newbalanceOrig,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,nameDest,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,oldbalanceDest,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,newbalanceDest,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,isFraud,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CMP-01,Completeness,isFlaggedFraud,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,VAL-01,Validity,step,step is a positive integer,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,VAL-02,Validity,amount,amount >= 0,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,VAL-03,Validity,isFraud,isFraud is 0 or 1,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,VAL-04,Validity,isFlaggedFraud,isFlaggedFraud is 0 or 1,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,VAL-05,Validity,type,type belongs to known transaction types,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,VAL-06,Validity,Balance Fields,Balance fields contain valid numeric values,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,UNQ-01,Uniqueness,All Rows,Detect exact duplicate transaction rows,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CON-01,Consistency,simulation_day/hour/time,simulation_day/hour/time agree with step,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CON-02,Consistency,amount_range,amount_range agrees with amount,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CON-03,Consistency,origin_balance_change,origin_balance_change = newbalanceOrig - oldbalanceOrg,200000,0,0,PASS
+dq_20260814T020601Z_f95a52c2,2026-08-14T02:06:01.238265+00:00,CON-04,Consistency,destination_balance_change,destination_balance_change = newbalanceDest - oldbalanceDest,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,step,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,type,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,amount,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,nameOrig,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,oldbalanceOrg,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,newbalanceOrig,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,nameDest,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,oldbalanceDest,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,newbalanceDest,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,isFraud,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CMP-01,Completeness,isFlaggedFraud,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,VAL-01,Validity,step,step is a positive integer,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,VAL-02,Validity,amount,amount >= 0,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,VAL-03,Validity,isFraud,isFraud is 0 or 1,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,VAL-04,Validity,isFlaggedFraud,isFlaggedFraud is 0 or 1,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,VAL-05,Validity,type,type belongs to known transaction types,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,VAL-06,Validity,Balance Fields,Balance fields contain valid numeric values,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,UNQ-01,Uniqueness,All Rows,Detect exact duplicate transaction rows,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CON-01,Consistency,simulation_day/hour/time,simulation_day/hour/time agree with step,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CON-02,Consistency,amount_range,amount_range agrees with amount,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CON-03,Consistency,origin_balance_change,origin_balance_change = newbalanceOrig - oldbalanceOrg,200000,0,0,PASS
+dq_20260814T022036Z_b3ee5b6d,2026-08-14T02:20:36.487192+00:00,CON-04,Consistency,destination_balance_change,destination_balance_change = newbalanceDest - oldbalanceDest,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,step,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,type,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,amount,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,nameOrig,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,oldbalanceOrg,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,newbalanceOrig,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,nameDest,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,oldbalanceDest,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,newbalanceDest,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,isFraud,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CMP-01,Completeness,isFlaggedFraud,Required column contains no NULLs,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,VAL-01,Validity,step,step is a positive integer,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,VAL-02,Validity,amount,amount >= 0,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,VAL-03,Validity,isFraud,isFraud is 0 or 1,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,VAL-04,Validity,isFlaggedFraud,isFlaggedFraud is 0 or 1,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,VAL-05,Validity,type,type belongs to known transaction types,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,VAL-06,Validity,Balance Fields,Balance fields contain valid numeric values,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,UNQ-01,Uniqueness,All Rows,Detect exact duplicate transaction rows,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CON-01,Consistency,simulation_day/hour/time,simulation_day/hour/time agree with step,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CON-02,Consistency,amount_range,amount_range agrees with amount,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CON-03,Consistency,origin_balance_change,origin_balance_change = newbalanceOrig - oldbalanceOrg,200000,0,0,PASS
+dq_20260814T022303Z_8a909a12,2026-08-14T02:23:03.386910+00:00,CON-04,Consistency,destination_balance_change,destination_balance_change = newbalanceDest - oldbalanceDest,200000,0,0,PASS
