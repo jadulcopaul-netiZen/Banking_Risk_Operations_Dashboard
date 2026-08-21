@@ -7,3 +7,19 @@ data/archive/**/*.zip
 **/~$*.xlsx
 **/~$*.xlsm
 **/~$*.xls
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.venv/
+
+# Editor
+.vscode/
+.idea/
