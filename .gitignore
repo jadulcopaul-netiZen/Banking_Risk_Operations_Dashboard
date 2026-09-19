@@ -23,3 +23,7 @@ venv/
 # Editor
 .vscode/
 .idea/
+
+# Regenerable pipeline outputs
+data/monitoring/transaction_history.csv
+data/bronze/transactions_200k_sampled.csv
