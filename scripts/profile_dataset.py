@@ -1,10 +1,13 @@
 import pandas as pd
+from pathlib import Path
 
 # ============================
 # Load Dataset
 # ============================
 
-df = pd.read_csv("data/bronze/transactions_200k_sampled.csv")
+file_path = Path(__file__).resolve().parent.parent / "data" / "bronze" / "transactions_200k_sampled.csv"
+
+df = pd.read_csv(file_path  )
 
 # ============================
 # Dataset Overview
