@@ -226,10 +226,10 @@ After refresh, confirm the dashboard displays:
 ## Known Limitations
 
 - **Partially manual pipeline:** Python steps (Bronze sampling, historical monitoring) are fully automated, but Silver, Gold, and the Power BI dashboard require manual refresh — there is no single command that runs the entire pipeline end-to-end.
-- **Gold-layer data quality is not independently validated:** The 12-rule Data Quality framework (22 check results) runs at the Silver layer only. Gold’s dq_all_results is a copy of Silver’s results, and Gold restructures Silver’s data into fact_transactions and dim_time. No check confirms that every fact row matches a dim_time row or that dim_time keys are unique. This item was deferred in Phase 6 and remains open.
+- **Gold-layer data quality is not independently validated:** The 12-rule Data Quality framework (22 check results) runs at the Silver layer only. Gold's `dq_all_results` is a copy of Silver's results, and Gold restructures Silver's data into `fact_transactions` and `dim_time`. No check confirms that every fact row matches a `dim_time` row or that `dim_time` keys are unique. This check was deferred until the Gold model existed and has not yet been implemented.
 - **Power BI path configuration is manual, not automatic:** Unlike the Excel-based Silver and Gold layers (which resolve their source paths automatically via a dynamic formula), Power BI's data source paths are managed through Parameters that must be manually updated after cloning to a new machine. Power BI does not support the same self-locating technique available in Excel.
 - **Synthetic, static, single-sample dataset:** PaySim is synthetic and may not fully represent real banking fraud behavior. The pipeline has been validated against one deterministic 200,000-row sample (`random_state=42`); it has not been tested against a structurally different dataset of the same schema (robustness testing, distinct from the reproducibility testing already completed).
-- **No automated environment setup from project start:** A virtual environment was introduced only during Phase 9 reproducibility testing. Earlier development relied on a global Python installation, which is documented here rather than retroactively obscured.
+- **No automated environment setup from project start:** A virtual environment was added only when reproducibility was tested on a clean clone. Earlier development used a global Python installation, which is documented here rather than retroactively obscured.
 
 ## Future Improvements
 
@@ -237,5 +237,5 @@ After refresh, confirm the dashboard displays:
 - Automate the Python historical-monitoring step to trigger after each Power Query refresh, reducing manual pipeline steps.
 - Replace CSV-based historical monitoring with a database-backed store for better query performance and concurrency handling at scale.
 - Test pipeline robustness against a structurally varied dataset (same schema, different volume/distribution), separate from the reproducibility testing already completed.
-- Migrate from pandas to a distributed processing framework (e.g., PySpark) if the dataset scale exceeds single-machine memory constraints — the original 8GB RAM development constraint that drove the 200K-row sampling decision in Phase 0.
-- Introduce incremental loading if the data source becomes continuously updated, rather than the current static full-refresh approach (full refresh was deliberately chosen in Phase 4 due to `step` being an unreliable watermark for a static source).
+- Migrate from pandas to a distributed processing framework (e.g., PySpark) if the dataset scale exceeds single-machine memory constraints. The original 8 GB RAM development machine is what drove the 200K-row sampling decision.
+- Introduce incremental loading if the data source becomes continuously updated. The current design uses a full refresh because the source is static and `step` is a repeating simulated-hour value, not a reliable watermark.
