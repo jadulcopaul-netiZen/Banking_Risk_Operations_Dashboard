@@ -108,7 +108,7 @@ This project is designed to run end-to-end from raw data ingestion through dashb
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/<jadulcopaul-netiZen>/Banking_Risk_Operations_Dashboard.git
+git clone https://github.com/jadulcopaul-netiZen/Banking_Risk_Operations_Dashboard.git
 cd Banking_Risk_Operations_Dashboard
 ```
 
@@ -144,15 +144,17 @@ pip install -r requirements.txt
 
 The raw dataset is intentionally excluded from this repository to reduce repository size.
 
-Download from Kaggle:
-**https://www.kaggle.com/datasets/ealaxi/paysim1**
+Download from Kaggle: **https://www.kaggle.com/datasets/ealaxi/paysim1** \
+Download Via: Kaggle CLI \
+Select Download dataset as zip 
+
+Create folder inside data named archive \
+Place the zip file at: data/archive \
+Extract the data there and you'll have /data/archive/archive/PS_20174392719_1491204439457_log.csv 
 
 After downloading and extracting, confirm the file:
 - Filename: `PS_20174392719_1491204439457_log.csv`
 - Size: approximately 482 MB
-
-Place it at: data/archive/archive/PS_20174392719_1491204439457_log.csv
-
 
 ### Step 5: Generate the Bronze Layer
 
@@ -224,7 +226,7 @@ After refresh, confirm the dashboard displays:
 ## Known Limitations
 
 - **Partially manual pipeline:** Python steps (Bronze sampling, historical monitoring) are fully automated, but Silver, Gold, and the Power BI dashboard require manual refresh — there is no single command that runs the entire pipeline end-to-end.
-- **Gold-layer data quality is not independently validated:** The 22-rule Data Quality framework runs at the Silver layer only. Gold carries forward Silver's validated data and restructures it into a fact/dimension model, but no check currently confirms the fact-to-dimension relationship itself is complete (e.g., no orphaned `fact_transactions` rows missing a corresponding `dim_time` entry). This was identified as a gap in Phase 6 and remains open pending implementation.
+- **Gold-layer data quality is not independently validated:** The 12-rule Data Quality framework (22 check results) runs at the Silver layer only. Gold’s dq_all_results is a copy of Silver’s results, and Gold restructures Silver’s data into fact_transactions and dim_time. No check confirms that every fact row matches a dim_time row or that dim_time keys are unique. This item was deferred in Phase 6 and remains open.
 - **Power BI path configuration is manual, not automatic:** Unlike the Excel-based Silver and Gold layers (which resolve their source paths automatically via a dynamic formula), Power BI's data source paths are managed through Parameters that must be manually updated after cloning to a new machine. Power BI does not support the same self-locating technique available in Excel.
 - **Synthetic, static, single-sample dataset:** PaySim is synthetic and may not fully represent real banking fraud behavior. The pipeline has been validated against one deterministic 200,000-row sample (`random_state=42`); it has not been tested against a structurally different dataset of the same schema (robustness testing, distinct from the reproducibility testing already completed).
 - **No automated environment setup from project start:** A virtual environment was introduced only during Phase 9 reproducibility testing. Earlier development relied on a global Python installation, which is documented here rather than retroactively obscured.
